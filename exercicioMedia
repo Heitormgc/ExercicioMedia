@@ -1,0 +1,55 @@
+
+package exercicioMedia;
+
+public class CalculadoraDeNotas {
+
+    /**
+     * Calcula a média aritmética de quatro notas.
+     *
+     * @param nota1 Primeira nota do aluno.
+     * @param nota2 Segunda nota do aluno.
+     * @param nota3 Terceira nota do aluno.
+     * @param nota4 Quarta nota do aluno.
+     * @return A média aritmética das quatro notas.
+     */
+    public double calcularMedia(double nota1, double nota2, double nota3, double nota4) {
+        return (nota1 + nota2 + nota3 + nota4) / 4;
+    }
+
+    /**
+     * Verifica se o aluno foi aprovado ou reprovado.
+     *
+     * @param media A média calculada do aluno.
+     * @return true se o aluno foi aprovado (média >= 6), false caso contrário.
+     */
+    public boolean verificarAprovacao(double media) {
+        return media >= 6;
+    }
+
+    /**
+     * Método principal para testar os métodos da classe.
+     *
+     * @param args Argumentos de linha de comando (não utilizado).
+     */
+    public static void main(String[] args) {
+        
+        CalculadoraDeNotas calculadora = new CalculadoraDeNotas();
+
+       
+        double nota1 = 7.0;
+        double nota2 = 5.5;
+        double nota3 = 6.0;
+        double nota4 = 8.0;
+
+        
+        double media = calculadora.calcularMedia(nota1, nota2, nota3, nota4);
+
+       
+        boolean aprovado = calculadora.verificarAprovacao(media);
+
+        
+        System.out.println("Notas: " + nota1 + ", " + nota2 + ", " + nota3 + ", " + nota4);
+        System.out.println("Média: " + media);
+        System.out.println("Aprovado: " + (aprovado ? "Sim" : "Não"));
+    }
+}
